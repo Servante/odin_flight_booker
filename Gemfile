@@ -46,6 +46,8 @@ gem 'devise', '~> 4.8', '>= 4.8.1'
 
 gem 'simple_form', '~> 5.1'
 
+gem 'faker', '~> 3.0'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
