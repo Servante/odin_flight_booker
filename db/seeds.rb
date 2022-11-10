@@ -29,3 +29,4 @@ Flight.create!(departure_airport_id: 6, arrival_airport_id: 1, start: Time.now, 
 Flight.create!(departure_airport_id: 3, arrival_airport_id: 8, start: Time.now, flight_duration: '3hr')
 Flight.create!(departure_airport_id: 6, arrival_airport_id: 10, start: Time.now, flight_duration: '2hr')
 Flight.create!(departure_airport_id: 3, arrival_airport_id: 6, start: Time.now, flight_duration: '1hr')
+Flight.create!(departure_airport_id: 2, arrival_airport_id: 6, start: Time.now, flight_duration: '1hr')
