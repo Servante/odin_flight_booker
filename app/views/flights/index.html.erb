@@ -1,3 +1,10 @@
 <div class="header"></div>
-<div class="body"></div>
+<div class="body">
+  <%= render partial: "search_bars" %>
+  <ul> 
+    <% @flights.each do |flight| %>
+     <li><%= flight.id %></li>
+    <% end %>
+  </ul>     
+</div>
 <div class="footer"></div>
