@@ -1,0 +1,29 @@
+<!--<%= form_with url: "/flights", method: :get do |f| %>
+  <div class="form-field">
+    <%= f.label :departure_airport, "Departure Airport:" %>
+    <%= f.select(:departure_airport_id, options_for_select(@user_options))%>
+  </div>
+
+  <div class="form_field">
+    <%= f.label :arrival_airport_id, "Arrival Airport:" %>
+    <%= f.select(:arrival_airport_id, options_for_select(@user_options))%>
+  </div>
+
+  <div class="form_field">
+    <%= f.label :arrival_airport_id, "Arrival Airport:" %>
+    <%= f.select(:arrival_airport_id, @user_options)%>
+  </div>
+  
+  <div class="form_field">
+    <%= f.label :arrival_airport_id, "Arrival Airport:" %>
+    <%= f.select(:arrival_airport_id, @user_options)%>
+  </div>
+
+  <%= f.submit "Search" %>
+<% end %> -->
+
+
+<%= form_with url: "/flights", method: :get do |form| %>
+  <%= form.select(:id, options_for_select(@user_options)) %>
+  <%= form.submit "Search" %> 
+<% end %>
