@@ -1,6 +1,8 @@
-<%= form_with url: "/flights", method: :get do |form| %>
-  <%= form.select(:arrival_airport_id, options_for_select(@airport_options)) %>
-  <%= form.select(:departure_airport_id, options_for_select(@airport_options)) %>
-  <%# <%= form.select(:arrival_airport_id, options_for_select(@arrival_options)) %>
-  <%= form.submit "Search" %> 
-<% end %>
+<%= form_with url: "/flights", method: :get do |f| %>
+  <%= f.select(:arrival_airport_id, 
+                  options_for_select(@airport_options)) %>
+  <%= f.select(:departure_airport_id, 
+                  options_for_select(@airport_options)) %>
+  <%= f.date_select(:start) %>
+  <%= f.submit "Search" %> 
+<% end %> 
