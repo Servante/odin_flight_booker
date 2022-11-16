@@ -1,8 +1,10 @@
 <%= form_with url: "/flights", method: :get do |f| %>
   <%= f.select(:arrival_airport_id, 
-                  options_for_select(@airport_options)) %>
+               options_for_select(@airport_options)) %>
   <%= f.select(:departure_airport_id, 
-                  options_for_select(@airport_options)) %>
-  <%= f.date_select(:start) %>
+               options_for_select(@airport_options)) %>
+  <%= f.select(:ticket_count,
+               options_for_select([1,2,3,4]))%>
+  <%= f.date_field(:start) %>
   <%= f.submit "Search" %> 
 <% end %> 
