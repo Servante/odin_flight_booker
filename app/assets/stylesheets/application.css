@@ -31,7 +31,16 @@
  }
 
  .body-1 {
-  background-color: purple;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: silver;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+ }
+
+ .body-2 {
+  background-color: silver;
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -39,13 +48,12 @@
   align-items: center;
  }
 
- .body-2 {
-  background-color: navy;
+ .search {
   display: flex;
-  flex: 1;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  gap: 4px;
+ }
+ .search-field, select {
+  border-radius: 8px;
  }
 
  .header,
