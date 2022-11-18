@@ -1,23 +1,23 @@
 <%= form_with url: "/flights", method: :get do |f| %>
   <div class="search">
     <div class="search-field">
-      <%= f.label("Destination") %>
       <%= f.select(:arrival_airport_id, 
-                  options_for_select(@airport_options)) %>
+                  options_for_select(@airport_options),
+                  prompt: "Destination") %>
     </div>
     <div class="search-field">
-      <%= f.label("Departure") %>
       <%= f.select(:departure_airport_id, 
-                  options_for_select(@airport_options)) %>
+                  options_for_select(@airport_options),
+                  prompt: "Departure") %>
     </div>
     <div class="search-field">
-      <%= f.label("Passengers") %>
       <%= f.select(:ticket_count,
-                  options_for_select([1,2,3,4]))%>
+                  options_for_select([1,2,3,4]),
+                  prompt: "Passengers")%>
     </div>
     <div class="search-field">
-      <%= f.label("Date") %>
-      <%= f.date_field(:start) %>
+      <%= f.date_field(:start, 
+                       prompt: "Date") %>
     </div>
     <%= f.submit "Search" %>
   </div>

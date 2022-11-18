@@ -52,8 +52,9 @@
   display: flex;
   gap: 4px;
  }
- .search-field, select {
+ .search-field select {
   border-radius: 8px;
+  max-width: 120px;
  }
 
  .header,
