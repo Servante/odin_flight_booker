@@ -7,7 +7,7 @@
 # id                   :integer
 # departure_airport_id :integer
 # arrival_airport_id   :integer
-# departure_datetime   :datetime
+# departure_time       :datetime
 # flight_duration      :integer
 # created_at           :datetime
 # updated_at           :datetime
