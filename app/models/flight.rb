@@ -1,3 +1,19 @@
+# frozen_string_literal: true
+
+# == Schema Information
+
+# Table name: flights
+
+# id                   :integer
+# departure_airport_id :integer
+# arrival_airport_id   :integer
+# departure_datetime   :datetime
+# flight_duration      :integer
+# created_at           :datetime
+# updated_at           :datetime
+
+
+
 class Flight < ApplicationRecord
   #validations
 

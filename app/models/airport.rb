@@ -1,3 +1,16 @@
+# frozen_string_literal: true
+
+# == Schema Information
+
+# Table name: airports
+
+# id                   :integer
+# airport_code         :string
+# location             :string
+# created_at           :datetime
+# updated_at           :datetime
+
+
 class Airport < ApplicationRecord
   #validations
 
