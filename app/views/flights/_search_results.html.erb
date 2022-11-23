@@ -1,4 +1,5 @@
-<%= form_with url: "bookings/new/", method: "get" do |f| %>  
+<% if @flights[0] != nil %>
+  <%= form_with url: "bookings/new/", method: "get" do |f| %>  
   <div id="results">
     <% @flights.each do |flight| %>
       <div class="card">
@@ -41,5 +42,10 @@
   </div> 
   <div id="submit"> 
     <div><%= f.submit "Book Flight" %></div>
+  </div>
+  <% end %>
+<% else %>
+  <div class="empty-results">
+    <p>We're sorry, there are no available flights for that day.</p>
   </div>
 <% end %>
