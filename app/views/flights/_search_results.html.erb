@@ -1,5 +1,45 @@
-<ul> 
-  <% @flights.each do |flight| %>
-    <li><%= flight.id %></li>
-  <% end %>
-</ul>
+<%= form_with url: "bookings/new/", method: "get" do |f| %>  
+  <div id="results">
+    <% @flights.each do |flight| %>
+      <div class="card">
+        <div class="card-top">
+          <div class="airport-info">
+            <div class="airport-location">
+              <%= flight.departure_airport.location %>
+            </div>
+            <div class="airport-code">
+              <%= flight.departure_airport.airport_code %>
+            </div>
+          </div>
+          <div class="image"><%= image_tag("travel.jpeg") %></div>
+          <div class="airport-info">
+            <div class="airport-location">
+              <%= flight.arrival_airport.location %>
+            </div>
+            <div class="airport-code">
+              <%= flight.arrival_airport.airport_code %>
+            </div>
+          </div>
+        </div>
+        <div class="card-bottom">
+          <div class="radio-bttn">
+            <%= f.radio_button :flights, :flight_id %>
+            <%= f.label "select this flight" %>
+          </div>
+          <div class="datetime-info">
+            <div class="date">
+              <%= flight.departure_time.strftime("%m/%d/%Y") %>
+            </div>
+            <div class="time">
+              <%= flight.departure_time.strftime("%I:%M %p") %>
+            </div>
+            <div class="duration"><%= flight.flight_duration %></div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div> 
+  <div id="submit"> 
+    <div><%= f.submit "Book Flight" %></div>
+  </div>
+<% end %>
