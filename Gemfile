@@ -48,6 +48,10 @@ gem 'simple_form', '~> 5.1'
 
 gem 'faker', '~> 3.0'
 
+gem 'pry-rails', '~> 0.3.9'
+
+gem 'pry-doc', '~> 1.3'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
