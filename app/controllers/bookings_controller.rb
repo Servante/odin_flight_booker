@@ -1,6 +1,9 @@
 class BookingsController < ApplicationController
   def new
     @booking = Booking.new
+    @flight = Flight.find(booking_params)
+    ticket_count = params[:ticket_count].to_i
+    ticket_count.times {@booking.passengers.build}
   end
 
   private
