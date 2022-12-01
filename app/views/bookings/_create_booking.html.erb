@@ -1,0 +1,22 @@
+<div id="booking-form">
+<%= binding.pry %>
+  <%= form_with model: @booking, local: true do |f| %>
+
+    <%= f.hidden_field :ticket_count, :value => params[:ticket_count] %>
+    <%= f.fields_for :passengers do |passenger_form| %>
+      <div class="new_passenger_container">
+        <div class="form-field">
+          <%= passenger_form.label :name %>
+          <%= passenger_form.text_field :name %>
+        </div>
+        <div class="form-field">
+          <%= passenger_form.label :email %>
+          <%= passenger_form.email_field :email %>
+        </div>
+      </div>
+    <% end %>
+    <div class="form-button">
+      <%= f.submit "Book Flight" %>
+    </div>
+  <% end %>
+</div>
