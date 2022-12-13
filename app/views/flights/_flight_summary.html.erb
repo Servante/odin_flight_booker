@@ -1,0 +1,28 @@
+<div id="flight-summary-card">
+  <div id="flight-summary-container-1">
+    <div id="summary-title"> 
+      <p>Flight Number: <%= @flight.id %></p>
+    </div>
+  </div>
+  <div id="flight-summary-container-2">
+    <div id="summary-origin">
+      <%= @flight.departure_airport.location %>
+    </div>
+    <div id="flight-summary-join">
+      <p>to</p>
+    </div>
+    <div id="summary-destination">
+      <%= @flight.arrival_airport.location %>
+    </div>
+  </div>
+  <div id="flight-summary-container-3">
+    <div id="summary-flighttime-info">
+      <div id="summary-datetime">
+        <%= @flight.departure_time %>
+      </div>
+      <div id="summary-duration">
+        <%= @flight.flight_duration%>
+      </div>
+    </div>
+  </div>
+</div>
