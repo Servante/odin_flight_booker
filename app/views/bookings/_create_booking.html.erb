@@ -1,9 +1,11 @@
 <div id="booking-form">
   <%= form_with model: @booking, local: true do |f| %>
-
     <%= f.hidden_field :ticket_count, :value => params[:ticket_count] %>
+    <div id="new-booking-title">
+      <h3>Please Enter Passenger Information</h3>
+    </div>
     <%= f.fields_for :passengers do |passenger_form| %>
-      <div class="new_passenger_container">
+      <div class="new-passenger-container">
         <div class="form-field">
           <%= passenger_form.label :name %>
           <%= passenger_form.text_field :name %>
@@ -14,7 +16,7 @@
         </div>
       </div>
     <% end %>
-    <div class="form-button">
+    <div id="form-button">
       <%= f.submit "Book Flight" %>
     </div>
   <% end %>

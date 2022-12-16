@@ -81,14 +81,12 @@
  }
 
  .card-top {
-  /* background-color: aqua; */
   padding: 8px;
   gap: 12px;
   align-items: center;
  }
 
  .card-bottom {
-  /* background-color: lavender; */
   display: flex;
   padding: 8px;
   gap: 12px;
@@ -135,6 +133,22 @@
 
  .footer {
   background-color: lightgoldenrodyellow;
+ }
+
+ #booking-form #form-button{
+  text-align: center;
+ }
+
+ .new-passenger-container{
+  margin: 24px;
+ }
+
+ .form-field{
+  margin: 4px;
+ }
+
+ #new-booking-title h3{
+  margin-bottom: 30px;
  }
 
  #flight-summary-card {
