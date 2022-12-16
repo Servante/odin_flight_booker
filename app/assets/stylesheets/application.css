@@ -22,7 +22,7 @@
  }
 
  .header {
-  background-color: blue;
+  background-color: lightblue;
  }
 
  .body-1 {
@@ -134,17 +134,26 @@
  }
 
  .footer {
-  background-color: yellow;
+  background-color: lightgoldenrodyellow;
  }
 
  #flight-summary-card {
   width: 400px;
   border-style: inset;
-  border-radius: 3%;
+ }
+
+ #summary-title p{
+  font-weight: bold;
+ }
+
+ #summary-origin, #summary-destination{
+  font-weight: bold;
+  border-style: inset;
+  padding: 4px;
  }
 
  #flight-summary-container-1 {
-  background-color: blue;
+  background-color: lightgoldenrodyellow;
  }
 
  #flight-summary-container-1 p{
@@ -154,17 +163,30 @@
  #flight-summary-container-2 {
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
-  
-  background-color: gold;
+  align-items: center;  
+  background-color: lightblue;
  }
 
  #flight-summary-container-3 {
-  background-color: maroon;
+  background-color: lavender;
+  display: flex;
+  flex-direction: column;
  }
 
  #flight-summary-container-1,
  #flight-summary-container-2,
  #flight-summary-container-3 {
   padding: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+ }
+
+ #summary-flighttime-info {
+  display: flex;
+  justify-content: center;
+  flex-direction: column; 
+ }
+
+ #flight-summary-container-3 p{
+  margin: 0;
+  padding: 2px;
  }

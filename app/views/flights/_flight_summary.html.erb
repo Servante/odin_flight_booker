@@ -18,10 +18,10 @@
   <div id="flight-summary-container-3">
     <div id="summary-flighttime-info">
       <div id="summary-datetime">
-        <%= @flight.departure_time %>
+         <p><strong>Flight Time:  </strong><%= @flight.departure_time.strftime("%m/%d/%Y %-I:%M %p") %></p>
       </div>
       <div id="summary-duration">
-        <%= @flight.flight_duration%>
+        <p><strong>Flight Duration:  </strong><%= @flight.flight_duration %></p>
       </div>
     </div>
   </div>
