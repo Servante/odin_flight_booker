@@ -5,7 +5,7 @@
 # Table name: bookings
 
 # id                   :integer
-# flight_id            :string
+# flight_id            :integer
 # created_at           :datetime
 # updated_at           :datetime
 
