@@ -11,5 +11,5 @@
 # updated_at           :datetime
 
 class Passenger < ApplicationRecord
-  belongs_to :booking, foreign_key: :booking_id
+  belongs_to :booking
 end
