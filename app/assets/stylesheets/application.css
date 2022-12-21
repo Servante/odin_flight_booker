@@ -154,6 +154,7 @@
  .summary-card {
   width: 400px;
   border-style: inset;
+  margin-bottom: 24px;
  }
 
  #summary-title p{
@@ -205,12 +206,38 @@
   padding: 2px;
  }
 
- #passenger-summary-title{
-  align-items: center;
+ #passenger-summary-title h3{
+  background-color: lightgoldenrodyellow;
+  text-transform: capitalize;
+  margin: 0;
+  padding: 12px;
+  text-align: center;
  }
 
- #passenger-summary-title h3{
-  background-color: goldenrod;
+ .summary-card p {
   margin: 0;
-  padding: 4px;
  }
+
+ #passenger-summary-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+ }
+
+ .passenger-count {
+  padding: 8px;
+  margin-bottom: 12px;
+  background-color: lightblue;
+ }
+
+ .passenger-count p{
+  text-align: center;
+ }
+
+ .passenger-info {
+  background-color: lavender;
+  padding: 8px;
+ }
+ 
+
+ 
