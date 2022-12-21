@@ -151,7 +151,7 @@
   margin-bottom: 30px;
  }
 
- #flight-summary-card {
+ .summary-card {
   width: 400px;
   border-style: inset;
  }
@@ -203,4 +203,14 @@
  #flight-summary-container-3 p{
   margin: 0;
   padding: 2px;
+ }
+
+ #passenger-summary-title{
+  align-items: center;
+ }
+
+ #passenger-summary-title h3{
+  background-color: goldenrod;
+  margin: 0;
+  padding: 4px;
  }
