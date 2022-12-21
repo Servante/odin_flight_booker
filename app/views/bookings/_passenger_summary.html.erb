@@ -1,0 +1,22 @@
+<div class="summary-card">
+  <div id="passenger-summary-title">
+    <h3>Passengers for this flight: </h3>
+  </div>
+  <div id="passenger-summary-container">
+    <% count = 0 %>
+    <% @booking.passengers.each do |passenger| %>
+      <% count += 1 %>
+      <div class="passenger-info">
+        <div class="passenger-count">
+          <p><strong><%= "Passenger #{count}" %></strong></p>
+        </div>
+        <div class="passenger-name">
+          <p><strong>Name: </strong><%= passenger.name %><p>
+        </div>
+        <div class="passenger-email">
+          <p><strong>Email: </strong><%= passenger.email %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
