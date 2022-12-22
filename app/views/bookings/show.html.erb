@@ -1,8 +1,11 @@
 <div class="header"></div>
-<div class="body-1">
-  <%= render 'flights/flight_summary' %>     
-</div>
-<div class="body-2">
-  <%= render 'passenger_summary' %>
-</div>
+<div class="body-1 show-body">
+  <div class="summary-card">
+    <div id="booking-number">
+      <p><strong><%= "Booking ID: #{@booking.id}"%></strong></p>
+    </div>
+  </div>
+  <%= render 'flights/flight_summary' %> 
+  <%= render 'passenger_summary' %>    
+</div>  
 <div class="footer"></div>

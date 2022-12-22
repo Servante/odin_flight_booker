@@ -34,6 +34,10 @@
   align-items: center;
  }
 
+ .body-1, .show-body{
+  flex-direction: column;
+ }
+
  .body-2 {
   background-color: silver;
   display: flex;
@@ -239,5 +243,8 @@
   padding: 8px;
  }
  
-
+#booking-number p {
+  background-color: lightgoldenrodyellow;
+  padding: 12px;
+}
  
