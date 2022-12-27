@@ -1,6 +1,5 @@
 
 <% if @flights[0] != nil %>
-  <%# binding.pry %>
   <%= form_with url: "bookings/new/", method: "get" do |f| %>  
     <%= f.hidden_field :ticket_count, :value => params[:ticket_count]%>
     <div id="results">
