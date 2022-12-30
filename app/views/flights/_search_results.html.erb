@@ -31,20 +31,20 @@
             </div>
             <div class="datetime-info">
               <div class="date">
-                <%= flight.departure_time.strftime("%m/%d/%Y") %>
+                <%= flight.departure_date %>
               </div>
               <div class="time">
-                <%= flight.departure_time.strftime("%I:%M %p") %>
+                <%= flight.departure_time %>
               </div>
               <div class="duration"><%= flight.flight_duration %></div>
             </div>
           </div>
         </div>
       <% end %>
-      <div id="submit"> 
-        <div><%= f.submit "Book Flight" %></div>
-      </div>
     </div> 
+    <div id="submit"> 
+      <div><%= f.submit "Book Flight" %></div>
+    </div>
   <% end %>
 <% elsif @flights[0] == nil && params[:arrival_airport_id] != nil%>
   <div class="empty-results">
