@@ -47,6 +47,10 @@
   align-items: center;
  }
 
+ #search-instructions {
+  margin-bottom: 24px;
+ }
+
  #results {
   display: flex;
   flex-wrap: wrap;
