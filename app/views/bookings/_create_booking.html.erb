@@ -1,7 +1,6 @@
 <div id="booking-form">
   <%= form_with model: @booking, local: true do |f| %>
     <%= f.hidden_field :flight_id, :value => @flight.id %>
-
     <div id="new-booking-title">
       <h3>Please Enter Passenger Information</h3>
     </div>
@@ -9,11 +8,11 @@
       <div class="new-passenger-container">
         <div class="form-field">
           <%= passenger_form.label :name %>
-          <%= passenger_form.text_field :name %>
+          <%= passenger_form.text_field :name, required: true %>
         </div>
         <div class="form-field">
           <%= passenger_form.label :email %>
-          <%= passenger_form.email_field :email %>
+          <%= passenger_form.email_field :email, required: true %>
         </div>
       </div>
     <% end %>
