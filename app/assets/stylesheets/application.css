@@ -23,6 +23,16 @@
 
  .header {
   background-color: lightblue;
+  text-align: center;
+ }
+
+ .header h2{
+  margin: 8px;
+ }
+
+ .header a{
+  text-decoration: none;
+  color: black; 
  }
 
  .body-1 {
