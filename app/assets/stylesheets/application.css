@@ -35,6 +35,11 @@
   color: black; 
  }
 
+ .footer p{
+  text-align: center;
+  margin: 4px;
+ }
+
  .body-1 {
   font-family: Arial, Helvetica, sans-serif;
   background-color: silver;
