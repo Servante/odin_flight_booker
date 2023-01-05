@@ -12,10 +12,12 @@ class FlightGenerator
     end
   end
 
+  private
+
   def find_or_create_flights(airport_pair)
     origin = Airport.find_by(airport_code: airport_pair[0])
-    destination = Airport.find_by(airport_code: airport[1])
-    flights = Flight.where(departure_airport_id: origin.id, arrival_airport_id: destination.id, departure_date: @date)
+    destination = Airport.find_by(airport_code: airport_pair[1])
+    flights = Flight.where(departure_airport: origin, arrival_airport: destination, departure_date: @date)
     return if flights.count.positive?
 
     flight_duration = find_flight_duration(airport_pair)
@@ -27,7 +29,8 @@ class FlightGenerator
     departure_times.each do |departure_time|
       Flight.create(departure_airport: origin,
                     arrival_airport: destination,
-                    departure_time: departure_time,
+                    departure_time: departure_time.strftime("%l:%M %P"),
+                    departure_date: @date,
                     flight_duration: flight_duration)
     end
   end
