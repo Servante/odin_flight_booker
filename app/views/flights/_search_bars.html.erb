@@ -20,6 +20,7 @@
     </div>
     <div class="search-field">
       <%= f.date_field(:departure_date, 
+                       required: true,
                        prompt: "Date") %>
     </div>
     <%= f.submit "Search" %>
