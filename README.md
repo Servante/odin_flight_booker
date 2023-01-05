@@ -1,24 +1,38 @@
-# README
+# Odin-Flight-Booker
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A Ruby on Rails application which locates available flights and allows users to book them. 
 
-Things you may want to cover:
+Demonstrates key concepts of:
 
-* Ruby version
+* active record associations and their nested attributes
 
-* System dependencies
+* advanced forms
 
-* Configuration
+* active record queries
 
-* Database creation
+* basic database operation and seeding
 
-* Database initialization
+----------------------------------------
 
-* How to run the test suite
+This was a project completed for [The Odin Project's](https://www.theodinproject.com/) Ruby on Rails course. See the project details [here](https://www.theodinproject.com/lessons/ruby-on-rails-flight-booker).
 
-* Services (job queues, cache servers, search engines, etc.)
+Created with:
 
-* Deployment instructions
+* Ruby 3.1.2
 
-* ...
+* Rails 7.0.4
+
+* Database: Postgresql 
+
+
+Gems:
+
+* devise
+
+* simple_form
+
+* faker
+
+* pry
+
+* rspec
