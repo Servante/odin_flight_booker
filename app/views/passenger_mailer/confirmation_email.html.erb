@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+    <title>title</title>
+  </head>
+  <body>
+    <h1>Confirmation</h1>
+    <p>
+      Hello <%= params[:passenger].name.titleize %>, your flight has been booked.
+    </p><br>
+    <p>
+      To view your booking or make adjustments please follow this link: <%= @url %>.
+    </p>
+    <p>
+      Thanks for booking your flight through the Odin-flight-booker!
+    </p>
+  </body>  
+</html>
