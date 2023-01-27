@@ -64,6 +64,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 6.0', '>= 6.0.1'
   gem 'capybara', '~> 3.38'
   gem 'webdrivers', '~> 5.2'
+  gem 'letter_opener', '~> 1.8', '>= 1.8.1'
 end
 
 group :development do
