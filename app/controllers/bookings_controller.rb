@@ -10,11 +10,18 @@ class BookingsController < ApplicationController
     @booking = Booking.new(passenger_params)
     @flight = Flight.find(passenger_params[:flight_id])
     @flight.bookings << @booking
+    # binding.pry
 
-    if @booking.save
-      redirect_to @booking
-    else 
-      render :show, status: :unprocessable_entity
+    respond_to do |format|
+      if @booking.save
+        @booking.passengers.each do |passenger|
+          # binding.pry
+          PassengerMailer.with(passenger: passenger, booking: @booking, url: bookings_path(@booking.id)).confirmation_email.deliver_now
+        end
+        format.html { redirect_to booking_url(@booking) }
+      else 
+        format.html { render :new, status: unprocessable_entity }
+      end
     end
   end
 
