@@ -192,6 +192,7 @@
 
  .summary-card {
   width: 400px;
+  max-width: 350px;
   border-style: inset;
   margin-bottom: 24px;
  }
