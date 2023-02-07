@@ -21,7 +21,7 @@
     <div class="search-field">
       <%= f.date_field(:departure_date, 
                        required: true,
-                       placeholder: "Date") %>
+                       :value => Time.now.strftime('%Y-%m-%d')) %>
     </div>
     <%= f.submit "Search" %>
   </div>

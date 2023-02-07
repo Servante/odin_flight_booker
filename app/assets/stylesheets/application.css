@@ -285,8 +285,3 @@
   background-color: lightgoldenrodyellow;
   padding: 12px;
 }
-
-.search-field input {
-  -moz-appearance: textfield;
-  -webkit-appearance: none;
-}
