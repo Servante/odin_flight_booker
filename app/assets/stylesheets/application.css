@@ -47,6 +47,7 @@
   flex: 1;
   justify-content: center;
   align-items: center;
+  width: 100%;
  }
 
  .body-1, .show-body{
@@ -58,7 +59,6 @@
   display: flex;
   flex: 1;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
  }
 
@@ -66,13 +66,31 @@
   margin-bottom: 24px;
  }
 
+ #search {
+  display: flex;
+ }
+
  #results {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
+  padding: 16px;
+ }
+
+ @media only screen and (max-width: 600px) {
+  #search {
+    flex-direction: column;
+    align-items: center;
+    gap: 9px;
+  }
+
+  #results {
+    flex-direction: column;
+  }
  }
 
  #submit {
+  margin-bottom: 24px;
   display: flex;
   padding-top: 40px;
   align-items: center;
@@ -80,15 +98,12 @@
  }
 
  .card {
-  /* width: 180px; */
   font-family: Arial, Helvetica, sans-serif;
   height: 150px;
   border: 2px solid black;
   box-shadow: lavender;
   display: flex;
   flex-direction: column;
-  /* align-items: center;
-  justify-content: center */
  }
 
  img {
@@ -183,6 +198,7 @@
 
  #summary-title p{
   font-weight: bold;
+  text-align: center;
  }
 
  #summary-origin, #summary-destination{
@@ -210,6 +226,7 @@
   background-color: lavender;
   display: flex;
   flex-direction: column;
+  align-items: center;
  }
 
  #flight-summary-container-1,

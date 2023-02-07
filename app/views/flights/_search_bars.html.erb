@@ -2,7 +2,7 @@
   <strong><p>Please Select Search Criteria Below:</p></strong>
 </div>
 <%= form_with url: "/flights", method: :get do |f| %>
-  <div class="search">
+  <div id="search">
     <div class="search-field">
       <%= f.select(:arrival_airport_id, 
                   options_for_select(@airport_options),
