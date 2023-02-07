@@ -286,6 +286,7 @@
   padding: 12px;
 }
 
-input {
-  -webkit_appearance: none;
+.search-field input {
+  -moz-appearance: textfield;
+  -webkit-appearance: none;
 }
