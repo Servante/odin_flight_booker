@@ -14,10 +14,10 @@ class BookingsController < ApplicationController
 
     respond_to do |format|
       if @booking.save
-        @booking.passengers.each do |passenger|
-          # binding.pry
-          PassengerMailer.with(passenger: passenger, booking: @booking, url: bookings_path(@booking.id)).confirmation_email.deliver_now
-        end
+        # @booking.passengers.each do |passenger|
+        # #   # binding.pry
+        # #   # PassengerMailer.with(passenger: passenger, booking: @booking, url: bookings_path(@booking.id)).confirmation_email.deliver_now
+        # # end
         format.html { redirect_to booking_url(@booking) }
       else 
         format.html { render :new, status: unprocessable_entity }
