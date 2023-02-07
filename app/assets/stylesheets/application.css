@@ -285,4 +285,7 @@
   background-color: lightgoldenrodyellow;
   padding: 12px;
 }
- 
+
+input {
+  -webkit_appearance: none;
+}
