@@ -1,4 +1,4 @@
-# Odin-Flight-Booker
+# odin-flight-booker
 
 A Ruby on Rails application which locates available flights and allows users to book them. 
 
@@ -12,9 +12,16 @@ Demonstrates key concepts of:
 
 * basic database operation and seeding
 
+
+User will be able to:
+
+* search for available flights
+
+* book flights and add passengers
+
+
 ----------------------------------------
 
-This was a project completed for [The Odin Project's](https://www.theodinproject.com/) Ruby on Rails course. See the project details [here](https://www.theodinproject.com/lessons/ruby-on-rails-flight-booker).
 
 Created with:
 
