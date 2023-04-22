@@ -1,8 +1,8 @@
 FactoryBot.define do 
 
   factory :airport do 
-    airport_code { "SFO" }
-    location { "San Francisco, CA" }
+    airport_code { "TOP" }
+    location { "Minneapolis, MN" }
   end
 
   trait :new_york_city do
@@ -19,6 +19,7 @@ FactoryBot.define do
 
   trait :los_angeles do 
     airport_code { "LAX" }
+    id { 33 }
   end
 
   trait :dallas do
@@ -31,6 +32,16 @@ FactoryBot.define do
 
   trait :denver do
     airport_code { "DEN" }
+    id { 41 }
   end
 
+  trait :minneapolis do 
+    airport_code { "HHH" }
+    id { 42 }
+  end
+
+  trait :phoenix do 
+    airport_code { "PHX" }
+    id { 43 }
+  end
 end
