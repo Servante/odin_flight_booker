@@ -66,6 +66,7 @@ group :development, :test do
   gem 'capybara', '~> 3.38'
   gem 'webdrivers', '~> 5.2'
   gem 'letter_opener', '~> 1.8', '>= 1.8.1'
+  gem 'selenium-webdriver', '~> 4.9'
 end
 
 group :development do
