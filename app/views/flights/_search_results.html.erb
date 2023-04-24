@@ -1,5 +1,5 @@
 <div id="search-results">
-  <% if @flights[0] != nil %>
+  <% if @flights.empty? == false %>
     <%= form_with url: "bookings/new/", method: "get" do |f| %>  
       <%= f.hidden_field :ticket_count, :value => params[:ticket_count]%>
       <div id="results">
@@ -46,8 +46,8 @@
         <div><%= f.submit "Book Flight" %></div>
       </div>
     <% end %>
-  <% elsif @flights[0] == nil && params[:arrival_airport_id] != nil%>
-    <div class="empty-results">
+  <% elsif @flights.empty? %>
+    <div id="empty-results">
       <p>We're sorry, there are no available flights for that day.</p>
     </div>
   <% end %>

@@ -2,5 +2,12 @@
   <%= render partial: "search_bars" %>     
 </div>
 <div class="body-2">
-  <%= render partial: "search_results" %>
+  <% if @flights != nil %>
+    <%= render partial: "search_results" %>
+  <% end %>
+  <% flash.each do |type, msg| %>
+    <div>
+      <%= msg %>
+    </div>
+  <% end %>
 </div>
