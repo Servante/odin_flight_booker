@@ -27,19 +27,19 @@ RSpec.feature "Users can search flights" do
     select(3, from: "ticket_count")
     fill_in("departure_date", with: Time.zone.tomorrow)
     click_on("Search")
-    within(".flash-message") do
+    within(".body-2") do
       expect(page).to have_content("Please select two different locations!")
     end
   end
 
-  xscenario "with no flights available that day" do
+  scenario "with no flights available that day" do
     visit "/"
     select("Los Angeles, CA", from: "arrival_airport_id")
     select("Denver, CO", from: "departure_airport_id")
     fill_in("departure_date", with: Time.zone.today)
     click_on("Search")
-    within(".flash-message") do
-      expect(page).to have_content("Sorry, there are no available flights for that day.")
+    within(".body-2") do
+      expect(page).to have_content("We're sorry, there are no available flights for that day.")
     end
   end
 end
