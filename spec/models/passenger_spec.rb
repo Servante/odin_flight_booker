@@ -1,5 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe Passenger, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
-end
+  subject(:passenger) { described_class.new }
+
+  describe 'associations' do
+    it { should belong_to(:booking) }
+    it { should have_many(:flights) }
+  end
+end 
