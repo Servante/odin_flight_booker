@@ -67,6 +67,7 @@ group :development, :test do
   gem 'webdrivers', '~> 5.2'
   gem 'letter_opener', '~> 1.8', '>= 1.8.1'
   gem 'selenium-webdriver', '~> 4.9'
+  gem 'shoulda-matchers', '~> 5.3'
 end
 
 group :development do
