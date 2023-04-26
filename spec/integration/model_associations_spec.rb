@@ -10,17 +10,19 @@ RSpec.describe "model associations" do
   let!(:dallas) { create(:airport)}
 
   # flights
-  let!(:HHH_NYC) { create(:flight, id: 6500, departure_airport: minneapolis, arrival_airport: new_york_city) }
+  let!(:minneapolis_to_new_york_city) { create(:flight, id: 6500, departure_airport: minneapolis, arrival_airport: new_york_city) }
 
-  let!(:DFW_HHH) { create(:flight, id: 6501, departure_airport: dallas, arrival_airport: minneapolis) }
+  let!(:dallas_to_minneapolis) { create(:flight, id: 6501, departure_airport: dallas, arrival_airport: minneapolis) }
 
   # bookings
   let!(:wes_booking) { create(:booking, flight_id: 6500) }
   let!(:bria_booking) { create(:booking, flight_id: 6501) }
+  let!(:vada_booking) { create(:booking, flight_id: 6500) }
 
   # passengers
   let!(:wes) { create(:passenger, booking: wes_booking) }
-  let!(:bria) { create(:passenger, booking: bria_booking)}
+  let!(:bria) { create(:passenger, booking: bria_booking) }
+  let!(:vada) { create(:passenger, booking: wes_booking) }
   
   context 'airport' do
     it "includes correct arriving flights" do
@@ -30,35 +32,47 @@ RSpec.describe "model associations" do
 
     it "includes correct departing flights" do
       flight = Flight.find(6500)
-      expect(minneapolis.departing_flights). to include(flight)
+      expect(minneapolis.departing_flights).to include(flight)
     end
   end
 
   context 'passenger' do
-    xit "includes correct flights" do
-      #add associations 
+    it "includes correct flights" do
+      expect(wes.flights).to include(minneapolis_to_new_york_city)
+      expect(bria.flights).to include(dallas_to_minneapolis)
     end
 
-    xit "includes correct_booking" do
+    it "includes correct_booking" do
+      expect(wes.booking).to eq(wes_booking)
+      expect(bria.booking).to eq(bria_booking)
     end
   end
 
   context 'booking' do
-    xit "includes correct_passengers" do
+    it "includes correct_passengers" do
+      expect(wes_booking.passengers).to include(wes)
+      expect(bria_booking.passengers).to include(bria)
     end
 
-    xit "includes correct flights" do
+    it "includes correct flights" do
+      expect(wes_booking.flight).to eq(minneapolis_to_new_york_city)
+      expect(bria_booking.flight).to eq(dallas_to_minneapolis)
     end
 
-    xit "knows passenger count" do 
+    it "knows passenger count" do 
+      expect(wes_booking.passengers.count).to eq(2)
     end
   end
 
   context 'flight' do
-    xit "includes correct passengers" do
+    it "includes correct passengers" do
+      expect(minneapolis_to_new_york_city.passengers).to include(vada, wes)
+      expect(dallas_to_minneapolis.passengers).to include(bria)
     end
 
-    xit "includes correct booking" do
+    it "includes correct booking" do
+      expect(minneapolis_to_new_york_city.bookings).to include(wes_booking)
+      expect(dallas_to_minneapolis.bookings).to include(bria_booking)
     end
   end
 end
