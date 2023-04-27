@@ -3,7 +3,7 @@
 require 'rails_helper'
 
 RSpec.describe "project routing", :aggregate_failures, type: :routing do 
-  it "routes projects" do
+  it "routes project" do
     expect(get: "/flights").to route_to(controller: "flights", action: "index")
     expect(get: "/flights/123").to_not be_routable
     expect(get: "/bookings/new").to route_to(controller: "bookings", action: "new")
