@@ -9,4 +9,9 @@ RSpec.describe Passenger, type: :model do
     it { should belong_to(:booking) }
     it { should have_many(:flights) }
   end
+
+  describe 'validations' do
+    it { is_expected.to validate_presence_of(:name)}
+    it { is_expected.to validate_presence_of(:email)}
+  end
 end 
