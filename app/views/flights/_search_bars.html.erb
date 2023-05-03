@@ -19,7 +19,7 @@
     <div class="search-field">
       <%= f.select(:ticket_count,
                   options_for_select([1,2,3,4], params[:ticket_count]), 
-                  prompt: "Passengers")%>
+                  prompt: "Passengers", selected: 1)%>
     </div>
     <strong><p>When would you like to leave?</p></strong>
     <div class="search-field">
