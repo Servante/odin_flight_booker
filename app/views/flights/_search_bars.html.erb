@@ -1,28 +1,32 @@
-<div id="search-instructions">
+<%# <div id="search-instructions">
   <strong><p>Please Select Search Criteria Below:</p></strong>
-</div>
+</div> %>
 <%= form_with url: "/flights", method: :get do |f| %>
   <div id="search">
+    <strong><p>Where can we take you?</p></strong>
     <div class="search-field">
       <%= f.select(:arrival_airport_id, 
                   options_for_select(@airport_options),
                   prompt: "Destination") %>
     </div>
+    <strong><p>Where are you coming from?</p></strong>
     <div class="search-field">
       <%= f.select(:departure_airport_id, 
                   options_for_select(@airport_options),
                   prompt: "Departure") %>
     </div>
+    <strong><p>How many passengers?</p></strong>
     <div class="search-field">
       <%= f.select(:ticket_count,
                   options_for_select([1,2,3,4], params[:ticket_count]), 
                   prompt: "Passengers")%>
     </div>
+    <strong><p>When would you like to leave?</p></strong>
     <div class="search-field">
       <%= f.date_field(:departure_date, 
                        required: true,
                        :value => Time.now.strftime('%Y-%m-%d')) %>
     </div>
-    <%= f.submit "Search" %>
+    <%= f.submit "Search", id: 'search-button' %>
   </div>
 <% end %> 

@@ -14,16 +14,27 @@
  *= require_self
  */
 
+ @font-face {
+  font-family: avenir;
+  src: url('avenir-next-font.ttf');
+ }
+
+ * {
+  font-family: avenir;
+}
+
  body {
   margin: 0;
   height: 100vh;
   display: flex;
   flex-direction: column; 
+  background-color: #938e94
  }
 
  .header {
-  background-color: lightblue;
+  background-color: #557A95;
   text-align: center;
+  font-family: avenir, "Times New Roman", Times, serif;
  }
 
  .header h2{
@@ -41,8 +52,8 @@
  }
 
  .body-1 {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: silver;
+  /* font-family: Arial, Helvetica, sans-serif; */
+  /* background-color: #938e94; */
   display: flex;
   flex: 1;
   justify-content: center;
@@ -55,7 +66,7 @@
  }
 
  .body-2 {
-  background-color: silver;
+  /* background-color: #938e94; */
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -74,7 +85,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
-  padding: 16px;
+  padding: 48px;
  }
 
  @media only screen and (max-width: 600px) {
@@ -90,20 +101,23 @@
  }
 
  #submit {
-  margin-bottom: 24px;
+  margin-bottom: 42px;
   display: flex;
-  padding-top: 40px;
+  /* padding-top: 20px; */
   align-items: center;
   justify-content: center;
  }
 
  .card {
-  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
+  /* font-family: avenir; */
   height: 150px;
-  border: 2px solid black;
-  box-shadow: lavender;
+  /* border: 2px solid black; */
+  border-radius: 2%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
  }
 
  img {
@@ -115,7 +129,8 @@
  .card-top, .card-bottom {
   display: flex;
   flex: 1;
-  background-color: lavender;
+  /* background-color: lavender; */
+  background-color: #a39fb4;
  }
 
  .card-top {
@@ -170,8 +185,7 @@
  }
 
  .footer {
-  background-color: 
-  lightgoldenrodyellow;
+  background-color: #B1A296;
  }
 
  #booking-form #form-button{
@@ -193,8 +207,17 @@
  .summary-card {
   width: 400px;
   max-width: 350px;
-  border-style: inset;
+  /* border-style: inset; */
   margin-bottom: 24px;
+  /* font-family: Arial, Helvetica, sans-serif; */
+  /* font-family: avenir; */
+  /* height: 150px; */
+  /* border: 2px solid black; */
+  border-radius: 2%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  /* display: flex; */
+  /* flex-direction: column; */
+  overflow: hidden;
  }
 
  #summary-title p{
@@ -202,14 +225,20 @@
   text-align: center;
  }
 
- #summary-origin, #summary-destination{
+ /* #summary-origin, #summary-destination{
   font-weight: bold;
   border-style: inset;
   padding: 4px;
+ } */
+
+ .summary-locations {
+  background-color: #7395AE;
+  padding: 8px;
+  border-radius: 12%;
  }
 
  #flight-summary-container-1 {
-  background-color: lightgoldenrodyellow;
+  /* background-color: lightgoldenrodyellow; */
  }
 
  #flight-summary-container-1 p{
@@ -220,11 +249,11 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;  
-  background-color: lightblue;
+  /* background-color: lightblue; */
  }
 
  #flight-summary-container-3 {
-  background-color: lavender;
+  /* background-color: lavender; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -234,7 +263,8 @@
  #flight-summary-container-2,
  #flight-summary-container-3 {
   padding: 12px;
-  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: avenir; */
+  background-color: #a39fb4;
  }
 
  #summary-flighttime-info {
@@ -249,7 +279,7 @@
  }
 
  #passenger-summary-title h3{
-  background-color: lightgoldenrodyellow;
+  background-color: #B1A296;
   text-transform: capitalize;
   margin: 0;
   padding: 12px;
@@ -269,7 +299,7 @@
  .passenger-count {
   padding: 8px;
   margin-bottom: 12px;
-  background-color: lightblue;
+  background-color: #7395AE;
  }
 
  .passenger-count p{
@@ -277,11 +307,82 @@
  }
 
  .passenger-info {
-  background-color: lavender;
+  background-color: #a39fb4;
   padding: 8px;
  }
  
 #booking-number p {
-  background-color: lightgoldenrodyellow;
+  background-color: #B1A296;
   padding: 12px;
+}
+
+#submit input,
+#form-button input,
+#search-button{  
+  background-color: #7395AE;
+  border-radius: 17%;
+  font-size: 16px;
+  font-weight: bold;
+  border-style: none;
+  padding: 12px 10px 10px;
+  /* font-family: serif; */
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  transition: 0.3s ease all;
+}
+
+
+
+/* background-color: #7395AE;
+    border-radius: 17%;
+    font-size: 16px;
+    font-weight: bold;
+    border-style: none;
+    padding: 10px;
+    font-family: serif;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+} */
+
+.p-email {
+  margin-left: 3px;
+}
+
+
+
+#form-button input:hover,
+#submit input:hover,
+#search-button:hover {
+  background-color: #557A95
+}
+
+#form-button input:active,
+#submit input:active {
+  background-color: #557A95
+}
+
+#search {
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 16px;
+}
+
+#search p {
+  margin: 6px 0;
+  text-align: center;
+}
+
+.search-field {
+  text-align: center;
+}
+
+.search-field select {
+  text-align: center;
+  padding: 2px;
+}
+
+.search-field select:focus {
+  outline: none;
+}
+
+#search-button {
+  margin: 16px 0 20px 0
 }
