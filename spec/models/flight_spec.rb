@@ -16,12 +16,16 @@ RSpec.describe Flight, type: :model do
     let(:atlanta) { create(:airport, :atlanta) }
     let(:chicago) { create(:airport, :chicago) }
     subject(:flight_to_ORD) do
-      create (:flight, 
-              departure_id: atlanta.id,
-              arrival_id: chicago.id,
-              flight_duration: 224)
-      end
+      create(:flight, 
+            departure_airport_id: atlanta.id,
+            arrival_airport_id: chicago.id, 
+            flight_duration: 224)
+    end
 
-    describe
+    describe "#time_conversion" do 
+      it 'returns flight duration in hours and minutes' do 
+        expect(flight_to_ORD.time_conversion).to_eq("3hr 44min")
+      end
+    end
   end
 end
