@@ -19,4 +19,13 @@ class Flight < ApplicationRecord
   belongs_to :arrival_airport, class_name: 'Airport'
   has_many :bookings, dependent: :destroy
   has_many :passengers, through: :bookings  
+
+  def time_conversion 
+    m_dtime = flight_duration.to_i
+    hours = m_dtime / 60
+    mins = m_dtime % 60
+    return "#{hours}hr #{mins}min"
+  end
 end
+
+
