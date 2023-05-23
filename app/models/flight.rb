@@ -20,12 +20,15 @@ class Flight < ApplicationRecord
   has_many :bookings, dependent: :destroy
   has_many :passengers, through: :bookings  
 
-  def time_conversion 
+ 
+  #returns flight_duration in hours and minutes
+  def time_conversion                    
     m_dtime = flight_duration.to_i
     hours = m_dtime / 60
     mins = m_dtime % 60
     return "#{hours}hr #{mins}min"
   end
+
 end
 
 
