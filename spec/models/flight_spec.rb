@@ -24,7 +24,7 @@ RSpec.describe Flight, type: :model do
 
     describe "#time_conversion" do 
       it 'returns flight duration in hours and minutes' do 
-        expect(flight_to_ORD.time_conversion).to_eq("3hr 44min")
+        expect(flight_to_ORD.time_conversion).to eq("3hr 44min")
       end
     end
   end
