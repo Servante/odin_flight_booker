@@ -1,5 +1,7 @@
+#frozen_string_literal: true
+
 class PassengerMailer < ApplicationMailer
-  default from: 'wesley.larson73@gmail.com'
+  default from: 'weslarsondev@gmail.com'
 
   def confirmation_email
     @booking = Booking.find(params[:booking].id)
