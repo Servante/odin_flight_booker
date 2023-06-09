@@ -31,3 +31,6 @@
 /config/master.key
 
 /spec/features/test_spec.rb
+
+# Ignore application configuration
+/config/application.yml

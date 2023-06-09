@@ -52,6 +52,8 @@ gem 'pry-rails', '~> 0.3.9'
 
 gem 'pry-doc', '~> 1.3'
 
+gem 'figaro', '~> 1.2'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
