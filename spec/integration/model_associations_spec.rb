@@ -20,9 +20,9 @@ RSpec.describe "model associations" do
   let!(:vada_booking) { create(:booking, flight_id: 6500) }
 
   # passengers
-  let!(:wes) { create(:passenger, booking: wes_booking) }
-  let!(:bria) { create(:passenger, booking: bria_booking) }
-  let!(:vada) { create(:passenger, booking: wes_booking) }
+  let!(:wes) { create(:passenger, booking: wes_booking, name: "wes", email: "wes@example.com") }
+  let!(:bria) { create(:passenger, booking: bria_booking, name: "bria", email: "bria@example.com") }
+  let!(:vada) { create(:passenger, booking: wes_booking, name: "vada", email: "vada@example.com") }
   
   context 'airport' do
     it "includes correct arriving flights" do
