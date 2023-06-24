@@ -1,6 +1,6 @@
 # odin-flight-booker
 
-https://github.com/Servante/odin_flight_booker/commit/e6f431dcce6c2c341c40c3c63686d647fb03d18f
+![](https://github.com/Servante/odin_flight_booker/commit/e6f431dcce6c2c341c40c3c63686d647fb03d18f)
 
 A Ruby on Rails application which locates available flights and allows users to book them. 
 
