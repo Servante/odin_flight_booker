@@ -1,5 +1,7 @@
 # odin-flight-booker
 
+![](https://github.com/Servante/odin_flight_booker/blob/main/flight-booker.gif)
+
 A Ruby on Rails application which locates available flights and allows users to book them. 
 
 Demonstrates key concepts of:
@@ -12,12 +14,16 @@ Demonstrates key concepts of:
 
 * basic database operation and seeding
 
+* mailers (confirmation emails sent in production via sendGrid API)
+
 
 User will be able to:
 
 * search for available flights
 
 * book flights and add passengers
+
+* receive email confirmations
 
 
 ----------------------------------------
@@ -43,3 +49,16 @@ Gems:
 * pry
 
 * rspec
+
+* capybara
+
+* shoulda_matchers
+
+* selinum
+
+* factory_bot_rails
+
+* letteropener
+
+* figaro
+
