@@ -50,9 +50,13 @@ Gems:
 
 * rspec
 
-* shoulda
+* capybara
+
+* shoulda_matchers
 
 * selinum
+
+* factory_bot_rails
 
 * letteropener
 
