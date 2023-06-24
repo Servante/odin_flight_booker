@@ -14,12 +14,16 @@ Demonstrates key concepts of:
 
 * basic database operation and seeding
 
+* mailers (confirmation emails sent in production via sendGrid API)
+
 
 User will be able to:
 
 * search for available flights
 
 * book flights and add passengers
+
+* receive email confirmations
 
 
 ----------------------------------------
@@ -45,3 +49,12 @@ Gems:
 * pry
 
 * rspec
+
+* shoulda
+
+* selinum
+
+* letteropener
+
+* figaro
+
